@@ -1,0 +1,6 @@
+﻿open example@example.ex
+example@example.ex
+xxxxxxx
+cd ~サーバー上のアップロードしたいパス
+mput ~任意のパス\data.json
+quit

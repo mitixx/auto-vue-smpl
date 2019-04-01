@@ -1,0 +1,26 @@
+<!--use vue.js version-->
+<div id="app">
+    <p v-if="errored">
+        エラー発生により取得できませんでした。
+    </p>
+    <h3 v-for="lsn in info">{{ lsn.up_date }} </h3>
+        <table class="hanyou">
+                <thead>
+                <tr>
+                <th>講座名</th>
+                <th>申込者数</th>
+                <th>キャンセル待ち</th>
+                </tr>
+                </thead>
+                <tbody>
+  <tr v-for="lsn in info" class="lsn">
+    <th>{{ lsn.lsn_num }} {{ lsn.lsn_name }}</th>
+    <td>{{ lsn.num }}（組・名）</td>
+    <td>{{ lsn.cancel }}（組・名）</td>
+   </tr>
+    </tbody>
+    </table>
+</div>
+
+<!-- vue settings -->
+<script src="http://sportsp.wp.xdomain.jp/wp-content/status-json-vue.js"></script>
